@@ -117,3 +117,10 @@ To view the debug output click the _See the error info_ button.
 
 You should now have access to the error output.
 
+#### Known issues
+
+__Hangs after clicking submit__
+
+Probably issue with soft link. Try updating conf file: /cloudtk/Tk/CloudTk.conf
+
+- change L26: /usr/bin/Xvnc --> /usr/bin/x11vnc
