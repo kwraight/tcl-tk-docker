@@ -1,6 +1,6 @@
 # base image
 # FROM centos:centos7
-FROM --platform=linux/amd64 alpine:3.14
+FROM --platform=linux/amd64 alpine:3.21
 
 ### run as root
 USER root
@@ -15,7 +15,7 @@ RUN true \
     && apk upgrade
 # display packages
 RUN true \ 
-    && apk add gcompat libc6-compat ttf-linux-libertine fontconfig libxft libx11 x11vnc xclock xsetroot
+    && apk add gcompat libc6-compat ttf-linux-libertine fontconfig libxft libx11 x11vnc xclock xsetroot novnc
 # useful stuff
     RUN true \
     && apk add nano wget tcl tk
