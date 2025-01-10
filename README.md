@@ -27,7 +27,7 @@ Run container:
 
 notes:
 
-- _it_: run interactively
+- _it_: run interactively (booting with _sh_ commandline)
 - _p_: map ports
 - _e_: environment variable
 - _v_: volume mapping
@@ -50,18 +50,24 @@ In container /cloudtk directory:
 
 - run Cloudkt to unpack files
 
- > ./tclkit CloudTk.kit
+    > ./tclkit CloudTk.kit
 
 - close application (crtl+C)
 
 - run Tkinter pool code
 
- > tclsh Tk/TkPool/TkPool.tcl
+    > tclsh Tk/TkPool/TkPool.tcl
 
 
-### display issue
+### display issues
 
 Debugs:
 
 - check /tmp/.X11-unix exists on host system - else, you can't mount it into the container
-- 
+- make sure forwarding not forbidden on host system
+
+    > xhost +Local:*
+    > xhost
+
+
+
