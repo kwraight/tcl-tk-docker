@@ -48,6 +48,8 @@ RUN true \
     && mv tclkit-8.6.3-rhel5-x86_64?name=36b5cb68899cfcb79417a29f9c6d8176ebae0d24 tclkit \
     && chmod +x tclkit
 
+RUN true \ 
+    && ln -s /usr/bin/x11vnc /usr/bin/Xvnc
 # # # run as not root
 # RUN adduser appuser
 # USER appuser
