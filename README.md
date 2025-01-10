@@ -7,7 +7,7 @@ __Pre-requisites__
 You gotta have:
 
 - docker
-- some display packages
+- some display packages (check Dockerfile for list)
 
 ## Instructions
 
@@ -32,14 +32,36 @@ notes:
 - _e_: environment variable
 - _v_: volume mapping
 
-Test display mapping works in container:
+#### Tests 
+
+A couple of checks display mapping works in container:
+
+__xclock__
+
+Once in container run (from any directory):
 
 > xclock
 
 - should see clock pop-up
 
+__TkPool__
+
+In container /cloudtk directory:
+
+- run Cloudkt to unpack files
+
+ > ./tclkit CloudTk.kit
+
+- close application (crtl+C)
+
+- run Tkinter pool code
+
+ > tclsh Tk/TkPool/TkPool.tcl
+
+
 ### display issue
 
 Debugs:
 
-- check /tmp/.X11-unix exists
+- check /tmp/.X11-unix exists on host system - else, you can't mount it into the container
+- 
