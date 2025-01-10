@@ -9,9 +9,15 @@ USER root
 EXPOSE 8015
 
 ### set-up packages
+# update
 RUN true \ 
     && apk update \
-    && apk add gcompat libc6-compat ttf-linux-libertine fontconfig libxft libx11 x11vnc xclock \
+    && apk upgrade
+# display packages
+RUN true \ 
+    && apk add gcompat libc6-compat ttf-linux-libertine fontconfig libxft libx11 x11vnc xclock
+# useful stuff
+    RUN true \
     && apk add nano wget tcl tk
 
 ###  Centos stuff to fix broken package repository links
