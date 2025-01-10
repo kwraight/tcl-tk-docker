@@ -34,7 +34,9 @@ notes:
 
 #### Tests 
 
-A couple of checks display mapping works in container:
+A couple of checks display mapping works in container.
+
+If things don't work, check [below](#display-issues).
 
 __xclock__
 
@@ -59,9 +61,9 @@ In container /cloudtk directory:
     > tclsh Tk/TkPool/TkPool.tcl
 
 
-### display issues
+### Display Issues
 
-Debugs:
+__Debugs__
 
 - check /tmp/.X11-unix exists on host system - else, you can't mount it into the container
 - make sure forwarding not forbidden on host system
