@@ -15,7 +15,7 @@ RUN true \
     && apk upgrade
 # display packages
 RUN true \ 
-    && apk add gcompat libc6-compat ttf-linux-libertine fontconfig libxft libx11 x11vnc xclock
+    && apk add gcompat libc6-compat ttf-linux-libertine fontconfig libxft libx11 x11vnc xclock xsetroot
 # useful stuff
     RUN true \
     && apk add nano wget tcl tk
