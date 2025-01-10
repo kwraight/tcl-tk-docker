@@ -85,6 +85,8 @@ Running in /cloudtk directory of container:
 
 You should see some lines including (container) port and debug password.
 
+ - more info [here](https://cloudtk.tcl-lang.org/CloudTkFAQ.tml#Q3.1)
+
 In a browser navigate to the mapped port of the host system
 
  - e.g. (for example above) localhost:8015
