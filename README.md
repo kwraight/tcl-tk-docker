@@ -48,6 +48,8 @@ Once in container run (from any directory):
 
 __TkPool__
 
+Using example script from [CloudTk](#cloudtk-part).
+
 In container /cloudtk directory:
 
 - run Cloudkt to unpack files
@@ -66,10 +68,50 @@ In container /cloudtk directory:
 __Debugs__
 
 - check /tmp/.X11-unix exists on host system - else, you can't mount it into the container
+
 - make sure forwarding not forbidden on host system
 
     > xhost +Local:*
+
     > xhost
 
+## CloudTk part
 
+Based on [here](https://cloudtk.tcl-lang.org/CloudTkFAQ.tml#Q2.1)
+
+Running in /cloudtk directory of container:
+
+> ./tclkit CloudTk.kit
+
+You should see some lines including (container) port and debug password.
+
+In a browser navigate to the mapped port of the host system
+
+ - e.g. (for example above) localhost:8015
+
+Here you should see the CloudTk webapp front page.
+
+To see available tkinter scripts got to cloud tk page
+
+ - e.g. localhost:8015/cloudtk
+
+ - a pop-up should appear with fields for user and password. Use _webmaster_ for both
+
+    - this can be changed using the _Access Control_ settings from the next page
+
+You should see a list of available scripts which are (dynamically) compiled from container's /cloudtk/Tk directory.
+
+To run a script, click on the script radio button and then _submit_ button.
+
+The CloudTk webapp should then take you to a new page with the running app.
+
+### Issues
+
+If there is an issue the webapp will take you to the _debug_ page.
+
+To view the debug output click the _See the error info_ button.
+
+- a pop-up should appear with fields for user and password. Input _debug_ as user and the password (no quotations) from the terminal.
+
+You should now have access to the error output.
 
